@@ -1,0 +1,11 @@
+* Sirion
+
+An Elvish shell prompt visually based on [[https://github.com/tylerreckart/gondolin][Gondolin]]
+
+*** Installation
+
+```
+use epm
+epm:install github.com/amusingimpala75/sirion
+use github.com/amusingimpala75/sirion/sirion
+```
