@@ -4,8 +4,8 @@ An Elvish shell prompt visually based on [[https://github.com/tylerreckart/gondo
 
 *** Installation
 
-```
+#+BEGIN_SRC
 use epm
 epm:install github.com/amusingimpala75/sirion
 use github.com/amusingimpala75/sirion/sirion
-```
+#+END_SRC
