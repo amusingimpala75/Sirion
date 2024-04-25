@@ -20,28 +20,28 @@ set edit:prompt = {
 
   if (bool $status[is-repository]) {
     styled ' ⎇ '$status[local-branch] bright-green
-    if (bool $status[untracked]) {
+    if (!= 0 $status[untracked]) {
       styled ' ?' red
-    } elif (bool $status[uncomitted]) {
+    } elif (!= 0 $status[unstaged]) {
       styled ' +' yellow
-    } elif (bool $status[unstaged]) {
+    } elif (!= 0 $status[staged]) {
       styled ' !' blue
     # renamed TODO
     # deleted TODO
-    } elif (bool $status[stashes]) {
+    } elif (!= 0 $status[stashes]) {
       styled ' $'
     # unmerged TODO
-    } elif (bool $status[commits-ahead]) {
+    } elif (!= 0 $status[commits-ahead]) {
       styled ' ⇡'
-    } elif (bool $status[commits-behind]) {
+    } elif (!= 0 $status[commits-behind]) {
       styled ' ⇣'
-    } elif (bool $status[conflicted]) {
+    } elif (!= 0 $status[conflicted]) {
       styled ' ⇕'
     }
 
     put ' '$status[commit]
     # time since last commit TODO
-    if (!= $last-cmd-exit 0) {
+    if (!= 0 $last-cmd-exit) {
       styled ' ✗' bright-red
     }
   }
