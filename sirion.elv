@@ -39,7 +39,7 @@ set edit:prompt = {
       styled ' ⇕'
     }
 
-    put ' '$status[commit]
+    put ' '$status[commit][0..7]
     # time since last commit TODO
     if (!= 0 $last-cmd-exit) {
       styled ' ✗' bright-red
