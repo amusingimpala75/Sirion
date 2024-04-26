@@ -1,11 +1,18 @@
 * Sirion
 
-An Elvish shell prompt visually based on [[https://github.com/tylerreckart/gondolin][Gondolin]]
+An Elvish shell prompt visually based on [[https://github.com/tylerreckart/gondolin][Gondolin]], updated for the latest Elvish (0.20.1+).
+
+Depends on [[https://github.com/href/elvish-gitstatus][Gitstatus for Elvish]]
 
 *** Installation
 
 #+BEGIN_SRC
 use epm
+
+# dependencies
+epm:install github.com/href/elvish-gitstatus
+
 epm:install github.com/amusingimpala75/sirion
+
 use github.com/amusingimpala75/sirion/sirion
 #+END_SRC
